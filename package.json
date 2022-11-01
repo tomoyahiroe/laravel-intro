@@ -10,9 +10,13 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@prettier/plugin-php": "prettier/plugin-php",
         "axios": "^0.21",
+        "eslint": "^8.26.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
-    }
+        "postcss": "^8.1.14",
+        "prettier": "^2.7.1"
+    },
+    "dependencies": {}
 }
