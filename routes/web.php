@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\TestController;
-use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,14 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [TestController::class, 'index']);
 
-// Route::get('/test/{greeting?}', function ($greeting = "GoodMorning") {
-//     return $greeting."=おはようございます。";
-// });
-
-Route::get('/test/{msg?}', [TestController::class, 'index']);
-
-Route::get('/index', [IndexController::class, 'index']);
+Route::post('/', [TestController::class, 'post']);
