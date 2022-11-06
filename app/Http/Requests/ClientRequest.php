@@ -31,8 +31,21 @@ class ClientRequest extends FormRequest
             'name' => 'required',
             'role' => 'required',
             'email' => 'required|email',
-            'age' => 'numeric',
+            'age' => 'required|numeric',
             'registered_at' => 'date|nullable',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => '名前を入力してください',
+            'role.required' => '役職を入力してください',
+            'email.required' => 'メールアドレスを入力してください',
+            'email.email' => 'メールアドレスの形式で入力してください',
+            'age.required' => '年齢を入力してください',
+            'age.numeric' => '年齢は数値で入力してください',
+            'registered_at.date' => '登録日は日付型で入力してください',
         ];
     }
 }
